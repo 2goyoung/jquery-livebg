@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>登录 | splus前端框架</title>
+    <meta id="viewport" name="viewport" content="user-scalable=no" />
+    
+
+<style>
+    html, body {padding:0;margin:0; height:100%;overflow:hidden;}
+    .bg { width:100%;height:100%;background-color:#ccc;}
+    .login-panel {position:absolute;left: 50%; top: 50%; width:520px;height:430px;margin-left:-260px;margin-top:-215px;}
+    .login-panel .inner { width:100%;height:100%;background:#fff;opacity:0.65;filter:alpha(opacity=65);padding:30px;border:1px solid #ccc; }
+</style>
+
+</head>
+<body>
+
+    <div id="login-form" class="bg">
+        <div class="login-panel">
+            <div class="inner">
+                <h1>Livebg Demo</h1>
+                <p>实现背景图全屏（铺满容器）效果</p>
+                <p>run script: new Livebg('.bg', {src: "images/login/test01.jpg"})</p>
+                <p>
+                    options:<br>
+                     mode: 0,//图片缩放优先模式 0表示横向优先 1表示纵向优先<br>
+                     minWidth: 600,//图片最小宽度（根据mode值选择）<br>
+                     minHeight: "",//图片最小高度（根据mode值选择）<br>
+                     isFull: true,//是否全屏显示图片<br>
+                     isFixed: true,//是否采用背景固定<br>
+                     focus: "center center",//图片焦点位置[top,bottom,left,right,center]<br>
+                     padding: 0,//图片与容器的负内边距值，（根据mode值来决定方向）<br>
+                     src: '',//图片路径，可选，不设置时获取css中的background<br>
+                     follow: false,//开启鼠标跟随<br>
+                     followArrow: 2,//鼠标跟随的方向，0表示横向 1表示纵向，2表示横向与纵向
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/jquery/1.10.1/jquery.js"></script>
+    <script src="scripts/livebg/livebg.js"></script>
+
+    <script>
+        new Livebg('.bg', {src: "images/login/test01.jpg"})
+    </script>
+</body>
+</html>
